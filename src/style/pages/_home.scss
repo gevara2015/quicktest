@@ -1,0 +1,292 @@
+//**
+// Homepage
+//**
+
+$susy : (
+        columns: 12,
+        container: 970px,
+        global-box-sizing: border-box
+);
+body {
+    font-family : 'proximanova-regular';
+}
+
+.container-fluid {
+    @include container(970px);
+    @include clearfix();
+}
+
+header {
+    background    : $primary-color;
+    width         : 100%;
+    border-bottom : 2px solid #71973c;
+    .logo {
+        @include span(2);
+        padding-top : 12px;
+    }
+}
+
+.search-company {
+    position : relative;
+    padding  : 17px 0 15px;
+    @include span(6);
+    input[type="search"] {
+        @include size(100%, 35px);
+        padding     : 7px 15px 7px 37px;
+        line-height : 35px;
+        background  : #73993d;
+        @include border-radius(3px);
+        border      : none;
+        outline     : none;
+        color       : $silver;
+        font-size   : 15px;
+        &:focus {
+            @include placeholder {
+                opacity : 0;
+            }
+        }
+        @include placeholder {
+            color   : $white;
+            opacity : 1;
+            @include transition(all 0.2s linear);
+        }
+    }
+    .submit {
+        position  : absolute;
+        top       : 25px;
+        left      : 9px;
+        color     : #8ebc4d;
+        font-size : 20px;
+    }
+}
+
+.notification-block {
+    float       : left;
+    padding-top : 24px;
+    ul {
+        li {
+            display : inline-block;
+            a {
+                color     : $white;
+                font-size : 24px;
+            }
+        }
+    }
+}
+
+.user-block {
+    @include span(3 last);
+    padding-top : 17px;
+    a {
+        display : block;
+        color   : $white;
+        .overflow-img {
+            float        : left;
+            margin-right : 10px;
+            @include size(35px);
+            @include border-radius(3px);
+            overflow     : hidden;
+            img { width : 100%; }
+        }
+        .name {
+            display     : inline-block;
+            padding-top : 7px;
+            font-size   : 16px;
+        }
+    }
+}
+
+leftaside, rightaside {
+    width : 210px;
+    float : left;
+}
+
+leftaside { margin-right : 15px; }
+
+rightaside { margin-left : 15px; }
+
+maincontent {
+    float : left;
+    width : calc(100% - 450px);
+}
+
+.small-title {
+    display   : inline-block;
+    margin    : 20px 0;
+    font-size : 14px;
+    color     : #7c8695;
+}
+
+.aside-item {
+    padding-bottom : 20px;
+    border-bottom  : 1px solid #c7cdd9;
+    &:last-child { border-bottom : 0; }
+    .see-all {
+        float      : right;
+        margin-top : 20px;
+        font-size  : 14px;
+        color      : #1c2534;
+    }
+}
+
+.a-block {
+    figure {
+        figcaption {
+            font-size : 11px;
+            color     : #d3d3d3;
+        }
+    }
+}
+
+.main-menu {
+    li {
+        padding       : 10px 0 9px;
+        border-bottom : 1px solid #c7cdd9;
+        a {
+            display  : block;
+            overflow : hidden;
+            color    : #59606b;
+            em {
+                float     : left;
+                width     : 52px;
+                font-size : 28px;
+                color     : #c7cdd9;
+            }
+            span {
+                display     : inline-block;
+                padding-top : 7px;
+                font-size   : 16px;
+            }
+        }
+    }
+}
+
+.header-section {
+    padding-top : 10px;
+    @include clearfix();
+}
+
+.main-title {
+    float : left;
+}
+
+.add-new {
+    float          : right;
+    margin-top     : 4px;
+    @include size(145px, 30px);
+    line-height    : 30px;
+    color          : $white;
+    text-align     : center;
+    vertical-align : middle;
+    font-size      : 13px;
+    background     : $primary-color;
+    @include border-radius(5px);
+}
+
+.services-wrapper {
+    padding    : 15px;
+    margin-top : 25px;
+    border     : 1px solid #c7cdd9;
+    @include border-radius(7px);
+    @include clearfix();
+    .service-item {
+        @include span(4);
+        @include gutter(1.1%);
+        margin-bottom : 15px;
+        text-align    : center;
+        &:hover {
+            figure { background : #f4f7fb; }
+            span { color : #71973c; }
+        }
+        figure {
+            border        : 1px solid #c7cdd9;
+            padding       : 35px;
+            margin-bottom : 15px;
+            img { width : 100%; }
+        }
+        a { display : block; }
+        span {
+            display     : block;
+            padding     : 0 15px;
+            height      : 32px;
+            overflow    : hidden;
+            font-size   : 14px;
+            line-height : 1.3em;
+        }
+    }
+}
+
+.primary-list {
+    &.featured-companies {
+        .item {
+            .name { margin-bottom : 0; }
+            .role { margin-bottom : 3px; }
+        }
+    }
+    .item {
+        margin-bottom : 15px;
+        &:last-child { margin-bottom : 0; }
+        &:hover {
+            figure {
+                @include border-radius(100%);
+            }
+        }
+        span { display : block; }
+        .name {
+            margin-bottom : 10px;
+            color         : $title-color;
+            font-size     : 16px;
+        }
+        figure {
+            float        : left;
+            width        : 80px;
+            margin-right : 10px;
+            overflow     : hidden;
+            @include border-radius(5px);
+            @include transition(all 0.2s linear);
+            img {
+                display : block;
+                width   : 100%;
+            }
+        }
+        .role, .location, .description {
+            font-size : 16px;
+            color     : #7c8695;
+        }
+        .role {
+            display       : block;
+            margin-bottom : 7px;
+        }
+        .location { margin-bottom : 3px; }
+        .follow, .add-friend {
+            font-size : 14px;
+            color     : $title-color;
+        }
+    }
+}
+
+.copyright {
+    display   : block;
+    margin    : 20px 0;
+    font-size : 16px;
+    color     : #7c8695;
+}
+
+.additional-menu {
+    overflow : hidden;
+    li {
+        float       : left;
+        margin-left : 20px;
+        &:first-child { margin-left : 0; }
+        a {
+            font-size : 16px;
+            color     : #7c8695;
+        }
+    }
+}
+
+
+
+
+
+

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html ng-app="StartApp">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Angular</title>
+    <script src="../bower_components/angular/angular.js"></script>
+    <script src="../bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="../bower_components/angular-resource/angular-resource.js"></script>
+    <script src="../bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="scripts/services.js"></script>
+    <!--build css-->
+    <link rel="stylesheet" href="style/style.css"/>
+    </head>
+<body>
+
+    <mainheader></mainheader>
+
+    <div class="container-fluid">
+
+        <leftaside></leftaside>
+
+        <maincontent></maincontent>
+
+        <rightaside></rightaside>
+    </div>
+
+    <!--don't using js-->
+    <!--MAIN APP-->
+    <script src="components/main.angular.js"></script>
+
+    <!--add header-->
+    <script src="components/header/header.js"></script>
+
+    <!--add left-aside-->
+    <script src="components/left-aside/left-aside.js"></script>
+    
+    <!--add left-aside-->
+    <script src="components/center-content/main-content.js"></script>
+
+    <!--add right-aside-->
+    <script src="components/right-aside/right-aside.js"></script>
+
+</body>
+</html>
+
+
+

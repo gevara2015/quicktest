@@ -1,0 +1,29 @@
+* {
+    margin  : 0;
+    padding : 0;
+    @include border-box-sizing();
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight : normal;
+}
+
+ul {
+    li { list-style : none; }
+}
+
+a {
+    text-decoration : none;
+    &:hover, &:focus {
+        text-decoration : none;
+        outline         : none;
+    }
+}
+
+button {
+    border  : none;
+    outline : none;
+    &:hover, &:focus { outline : none; }
+}
+
+.wrap { overflow : hidden; }
