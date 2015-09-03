@@ -7,7 +7,6 @@
     <script src="../bower_components/angular-ui-router/release/angular-ui-router.js"></script>
     <script src="../bower_components/angular-resource/angular-resource.js"></script>
     <script src="../bower_components/jquery/dist/jquery.min.js"></script>
-    <script src="scripts/services.js"></script>
     <!--build css-->
     <link rel="stylesheet" href="style/style.css"/>
     </head>
@@ -16,6 +15,16 @@
     <mainheader></mainheader>
 
     <div class="container-fluid">
+
+
+        <div ng-controller="FirstCtrl">
+            <input type="text" ng-model="data.message">
+            <h3>{{data.message}}</h3>
+        </div>
+        <div ng-controller="SecondCtrl">
+            <input type="text" ng-model="data.message">
+            <h3>{{reversedMessage(data.message)}}</h3>
+        </div>
 
         <leftaside></leftaside>
 
@@ -26,7 +35,11 @@
 
     <!--don't using js-->
     <!--MAIN APP-->
+    <script src="scripts/app.js"></script>
     <script src="components/main.angular.js"></script>
+    <script src="scripts/controllers.js"></script>
+    <script src="scripts/filters.js"></script>
+    <script src="scripts/services.js"></script>
 
     <!--add header-->
     <script src="components/header/header.js"></script>
@@ -38,10 +51,4 @@
     <script src="components/center-content/main-content.js"></script>
 
     <!--add right-aside-->
-    <script src="components/right-aside/right-aside.js"></script>
-
-</body>
-</html>
-
-
-
+    <script src="components/right-aside/right-aside.js"></

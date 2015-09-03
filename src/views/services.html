@@ -1,14 +1,10 @@
-<div class="services-wrapper" ng-init="services=[
-   {name:'Accontancy', icon: 'icon-1'},
-   {name:'Associations'},
-   {name:'Buy/Sell Dental Practice'},
-   {name:'Clinical Waste Collection'}]">
-    <div class="service-item" ng-repeat="serviceName in services">
+<div class="services-wrapper" ng-controller="ServicesCtrl">
+    <div class="service-item" ng-repeat="service in services">
         <a href="#">
             <figure>
-                <img src="img/icon-1.png" alt=".">
+                <img ng-src="img/{{service.icon}}.png" alt=".">
             </figure>
-            <span class="name">{{serviceName.name}}</span>
+            <span class="name">{{service.name}}</span>
         </a>
     </div>
 </div>
